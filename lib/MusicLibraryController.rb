@@ -51,7 +51,6 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     list_songs
     choice = gets
-    choice = Integer(choice)
     if choice > 0 && choice <= @music_importer.files.size
       song = @music_importer.files[choice]
       puts "Playing #{song.name} by #{song.artist.name}"
