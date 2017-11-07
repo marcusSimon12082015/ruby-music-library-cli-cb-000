@@ -41,6 +41,6 @@ class MusicLibraryController
     sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.name} - #{song.genre.name}"}
   end
   def list_songs_by_genre
-    
+
   end
 end
