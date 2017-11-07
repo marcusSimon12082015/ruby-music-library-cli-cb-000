@@ -33,4 +33,9 @@ class MusicLibraryController
     sorted_list = uniq_genres.sort!{|a,b| a.genre.name <=> b.genre.name}
     sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.genre.name}"}
   end
+  def list_songs_by_artist
+    puts "Please enter the name of an artist:"
+    artist = gets
+    
+  end
 end
