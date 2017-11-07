@@ -54,8 +54,7 @@ class MusicLibraryController
     if choice.is_a? Integer
       if choice > 0 && choice <= @music_importer.files.size
         sorted_list = @music_importer.files.sort!{|a,b| a.name <=> b.name}
-        song = sorted_list[choice]
-        puts "Playing #{song.name} by #{song.artist.name}"
+        puts "Playing #{sorted_list[choice-1].name} by #{sorted_list[choice-1].artist.name}"
       end
     end
   end
