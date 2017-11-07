@@ -16,6 +16,17 @@ class MusicLibraryController
     puts "What would you like to do?"
     loop do
       choice = gets
+      if choice == "list songs"
+        list_songs
+      elsif choice == "list artists"
+        list_artists
+      elsif choice == "list genres"
+        list_genres
+      elsif choice == "list artist"
+        list_songs_by_artist
+      elsif choice == "list genre"
+        list_songs_by_genre
+      end  
       break if choice == "exit"
     end
   end
