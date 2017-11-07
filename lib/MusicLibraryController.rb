@@ -41,6 +41,10 @@ class MusicLibraryController
     sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.name} - #{song.genre.name}"}
   end
   def list_songs_by_genre
-
+    puts "Please enter the name of a genre:"
+    genre = gets
+    genre = @music_importer.files.select{|song| song.genre.name == genre}
+    sorted_list = genre.sort!{|a,b| a.name <=> b.name}
+    sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.name} - #{song.genre.name}"}
   end
 end
