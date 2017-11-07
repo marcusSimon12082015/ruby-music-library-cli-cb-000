@@ -28,4 +28,9 @@ class MusicLibraryController
     sorted_list = uniq_artist.sort!{|a,b| a.artist.name <=> b.artist.name}
     sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.artist.name}"}
   end
+  def list_genres
+    uniq_genres = @music_importer.files.uniq!{|song| song.genre.name}
+    sorted_list = uniq_genres.sort!{|a,b| a.genre.name <=> b.genre.name}
+    sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.genre.name}"}
+  end
 end
