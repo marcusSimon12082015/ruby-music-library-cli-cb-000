@@ -51,12 +51,12 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     #list_songs
     choice = gets
-    puts "My Choice --> #{choice}"
-    # if choice.is_a? Integer
+    if choice.is_a? Integer
+      puts "My Choice --> #{choice}"
     #   if (choice > 0) && (choice <= @music_importer.files.size)
     #     sorted_list = @music_importer.files.sort!{|a,b| a.name <=> b.name}
     #     puts "Playing"
     #   end
-    # end
+     end
   end
 end
