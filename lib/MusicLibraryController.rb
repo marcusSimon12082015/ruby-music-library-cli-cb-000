@@ -49,7 +49,7 @@ class MusicLibraryController
   end
   def play_song
     puts "Which song number would you like to play?"
-    list_songs
+    #list_songs
     choice = gets
     if choice.is_a? Integer
       if choice > 0 && choice <= @music_importer.files.size
