@@ -36,6 +36,8 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     artist = gets
-    
+    songs = @music_importer.files.select{|song| song.artist.name == artist}
+    sorted_list = songs.sort!{|a,b| a.name <=> b.name}
+    sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.genre.name}"}    
   end
 end
