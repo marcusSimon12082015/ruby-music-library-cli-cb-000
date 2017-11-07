@@ -182,7 +182,7 @@ CLI Methods
 Failures:
 
   1) CLI Methods #list_artists prints all artists in the music library in a numbered list (alphabetized by artist name)
-     Failure/Error: sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.artist.name}"}.uniq
+     Failure/Error: sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.artist.name}"}
 
        #<IO:<STDOUT>> received :puts with unexpected arguments
          expected: ("4. Thundercat")
@@ -194,7 +194,7 @@ Failures:
      # ./lib/MusicLibraryController.rb:28:in `list_artists'
      # ./spec/011_music_library_cli_methods_spec.rb:35:in `block (3 levels) in <top (required)>'
 
-Finished in 0.06763 seconds (files took 0.38323 seconds to load)
+Finished in 0.0852 seconds (files took 0.47034 seconds to load)
 84 examples, 1 failure
 
 Failed examples:
