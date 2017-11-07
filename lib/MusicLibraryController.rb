@@ -38,6 +38,6 @@ class MusicLibraryController
     artist = gets
     songs = @music_importer.files.select{|song| song.artist.name == artist}
     sorted_list = songs.sort!{|a,b| a.name <=> b.name}
-    sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.name} - #{song.genre}"}
+    sorted_list.each_with_index{|song, index| puts "#{index+1}. #{song.name} - #{song.genre.name}"}
   end
 end
